@@ -3,7 +3,8 @@ import searchMovie from '../services/movieService';
 import OneMovie from './oneMovie/OneMovie';
 
 const SearchMovie = ({setResults}) => {
-    const [searchWorld, setSearchWord] = useState('');
+    const [searchWord, setSearchWord] = useState('');
+    const [query, setQuery] = useState("")
 
     //1. set search word to state
     const handleChange = (searchWord) => {
@@ -11,30 +12,24 @@ const SearchMovie = ({setResults}) => {
     }
 
     //2. function calling service api
-    const getMovies = (searchWorld) => {
-        searchMovie(searchWorld).then(res => {
+    const getMovies = (searchWord) => {
+        searchMovie(searchWord).then(res => {
             setResults(res);
         })
     }
     //3. useEffect watching calling api
     useEffect(() => {
-        getMovies(searchWorld);
-    }, [searchWorld])
+        getMovies(searchWord);
+    }, [searchWord])
 
     return (
         <div>
             <input
             type="text"
-            value={searchWorld}
+            value={searchWord}
             onChange={(e) => handleChange(e.target.value)}/>
         </div>
     )
     }
-
-
-
-    
-
-
 
 export default SearchMovie
