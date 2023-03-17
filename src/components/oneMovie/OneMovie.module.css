@@ -1,0 +1,323 @@
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 10px pink;
+    gap: 20px;
+  }
+
+  .oneMovie {
+    width: 500px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(255, 8, 234, 0.1);
+    backdrop-filter: blur(6.5px);
+    -webkit-backdrop-filter: blur(6.5px);
+    border: 1px solid rgba(255, 255, 255, 0.43);
+  }
+
+  .glitchXXL {
+    text-align: center;
+    font-size: 35px;
+    color: #dcafe8;
+    animation: glitch 265ms infinite;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.5rem;
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, .75), -0.025em -.05em 0 rgba(0, 255, 0, .75), 0.025em .05em 0 rgba(0, 0, 255, .75);
+  }
+  
+  .glitch2Bedore {
+    font-size: 6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.5rem;
+    color: white;
+  }
+  
+  @keyframes glitch {
+    0% {
+      text-shadow:
+        0.05em 0 0 rgba(255, 0, 0, .75),
+        -0.025em -.05em 0 rgba(0, 255, 0, .75),
+        0.025em .05em 0 rgba(0, 0, 255, .75);
+    }
+  
+    14% {
+      text-shadow:
+        0.05em 0 0 rgba(255, 0, 0, .75),
+        -0.025em -.05em 0 rgba(0, 255, 0, .75),
+        0.025em .05em 0 rgba(0, 0, 255, .75);
+    }
+  
+    15% {
+      text-shadow:
+        -0.05em -.025em 0 rgba(255, 0, 0, .75),
+        0.025em 0.025em 0 rgba(0, 255, 0, .75),
+        -0.05em -.05em 0 rgba(0, 0, 255, .75);
+    }
+  
+    49% {
+      text-shadow:
+        -0.05em -.025em 0 rgba(255, 0, 0, .75),
+        0.025em 0.025em 0 rgba(0, 255, 0, .75),
+        -0.05em -.05em 0 rgba(0, 0, 255, .75);
+    }
+  
+    50% {
+      text-shadow:
+        0.025em 0.05em 0 rgba(255, 0, 0, .75),
+        0.05em 0 0 rgba(0, 255, 0, .75),
+        0 -0.05em 0 rgba(0, 0, 255, .75);
+    }
+  
+    99% {
+      text-shadow:
+        0.025em 0.05em 0 rgba(255, 0, 0, .75),
+        0.05em 0 0 rgba(0, 255, 0, .75),
+        0 -0.05em 0 rgba(0, 0, 255, .75);
+    }
+  
+    100% {
+      text-shadow:
+        -0.025em 0 0 rgba(255, 0, 0, .75),
+        -0.025em -0.025em 0 rgba(0, 255, 0, .75),
+        -0.025em -0.05em 0 rgba(0, 0, 255, .75);
+    }
+  }
+  
+  .containerGlitch {
+    margin-top: 40px;
+    width: 100%;
+    max-width: 1175px;
+    height: auto;
+  }
+  
+  
+  .glitchXL {
+    font-size: 22px;
+    text-align: center;
+    color: #dcafe8;
+    animation: glitch 612ms infinite;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.5rem;
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, .75), -0.025em -.05em 0 rgba(0, 255, 0, .75), 0.025em .05em 0 rgba(0, 0, 255, .75);
+  }
+  
+  .glitch2Bedore {
+    font-size: 6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.5rem;
+    color: white;
+  }
+  
+  @keyframes glitch {
+    0% {
+      text-shadow:
+        0.05em 0 0 rgba(255, 0, 0, .75),
+        -0.025em -.05em 0 rgba(0, 255, 0, .75),
+        0.025em .05em 0 rgba(0, 0, 255, .75);
+    }
+  
+    14% {
+      text-shadow:
+        0.05em 0 0 rgba(255, 0, 0, .75),
+        -0.025em -.05em 0 rgba(0, 255, 0, .75),
+        0.025em .05em 0 rgba(0, 0, 255, .75);
+    }
+  
+    15% {
+      text-shadow:
+        -0.05em -.025em 0 rgba(255, 0, 0, .75),
+        0.025em 0.025em 0 rgba(0, 255, 0, .75),
+        -0.05em -.05em 0 rgba(0, 0, 255, .75);
+    }
+  
+    49% {
+      text-shadow:
+        -0.05em -.025em 0 rgba(255, 0, 0, .75),
+        0.025em 0.025em 0 rgba(0, 255, 0, .75),
+        -0.05em -.05em 0 rgba(0, 0, 255, .75);
+    }
+  
+    50% {
+      text-shadow:
+        0.025em 0.05em 0 rgba(255, 0, 0, .75),
+        0.05em 0 0 rgba(0, 255, 0, .75),
+        0 -0.05em 0 rgba(0, 0, 255, .75);
+    }
+  
+    99% {
+      text-shadow:
+        0.025em 0.05em 0 rgba(255, 0, 0, .75),
+        0.05em 0 0 rgba(0, 255, 0, .75),
+        0 -0.05em 0 rgba(0, 0, 255, .75);
+    }
+  
+    100% {
+      text-shadow:
+        -0.025em 0 0 rgba(255, 0, 0, .75),
+        -0.025em -0.025em 0 rgba(0, 255, 0, .75),
+        -0.025em -0.05em 0 rgba(0, 0, 255, .75);
+    }
+  }
+  
+  .containerGlitch {
+    margin-top: 40px;
+    width: 100%;
+    max-width: 1175px;
+    height: auto;
+  }
+  
+  
+  .glitchL {
+    font-size: 12px;
+    text-align: center;
+    color: #dcafe8;
+    animation: glitch 1188ms infinite;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.5rem;
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, .75), -0.025em -.05em 0 rgba(0, 255, 0, .75), 0.025em .05em 0 rgba(0, 0, 255, .75);
+  }
+  
+  .glitch2Bedore {
+    font-size: 6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.5rem;
+    color: white;
+  }
+  
+  @keyframes glitch {
+    0% {
+      text-shadow:
+        0.05em 0 0 rgba(255, 0, 0, .75),
+        -0.025em -.05em 0 rgba(0, 255, 0, .75),
+        0.025em .05em 0 rgba(0, 0, 255, .75);
+    }
+  
+    14% {
+      text-shadow:
+        0.05em 0 0 rgba(255, 0, 0, .75),
+        -0.025em -.05em 0 rgba(0, 255, 0, .75),
+        0.025em .05em 0 rgba(0, 0, 255, .75);
+    }
+  
+    15% {
+      text-shadow:
+        -0.05em -.025em 0 rgba(255, 0, 0, .75),
+        0.025em 0.025em 0 rgba(0, 255, 0, .75),
+        -0.05em -.05em 0 rgba(0, 0, 255, .75);
+    }
+  
+    49% {
+      text-shadow:
+        -0.05em -.025em 0 rgba(255, 0, 0, .75),
+        0.025em 0.025em 0 rgba(0, 255, 0, .75),
+        -0.05em -.05em 0 rgba(0, 0, 255, .75);
+    }
+  
+    50% {
+      text-shadow:
+        0.025em 0.05em 0 rgba(255, 0, 0, .75),
+        0.05em 0 0 rgba(0, 255, 0, .75),
+        0 -0.05em 0 rgba(0, 0, 255, .75);
+    }
+  
+    99% {
+      text-shadow:
+        0.025em 0.05em 0 rgba(255, 0, 0, .75),
+        0.05em 0 0 rgba(0, 255, 0, .75),
+        0 -0.05em 0 rgba(0, 0, 255, .75);
+    }
+  
+    100% {
+      text-shadow:
+        -0.025em 0 0 rgba(255, 0, 0, .75),
+        -0.025em -0.025em 0 rgba(0, 255, 0, .75),
+        -0.025em -0.05em 0 rgba(0, 0, 255, .75);
+    }
+  }
+  
+  .containerGlitch {
+    margin-top: 40px;
+    width: 100%;
+    max-width: 1175px;
+    height: auto;
+  }
+  
+  .mainImg {
+    height: 300px;
+    width: 200px;
+    object-fit: cover;
+  
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0);
+    box-shadow: 0 4px 30px rgba(187, 84, 197, 0.1);
+    border-radius: 16px;
+    backdrop-filter: blur(6.5px);
+    -webkit-backdrop-filter: blur(6.5px);
+    border: 1px solid rgba(255, 255, 255, 0.43);
+
+}
+  
+    /* animation: animation1 2s ease-in-out 1s infinite alternate backwards;
+  
+  }
+  
+  @keyframes animation1 {
+    0% {
+      transform: scale3d(1, 1, 1);
+    }
+  
+    30% {
+      transform: scale3d(1.25, 0.75, 1);
+    }
+  
+    40% {
+      transform: scale3d(0.75, 1.25, 1);
+    }
+  
+    50% {
+      transform: scale3d(1.15, 0.85, 1);
+    }
+  
+    65% {
+      transform: scale3d(0.95, 1.05, 1);
+    }
+  
+    75% {
+      transform: scale3d(1.05, 0.95, 1);
+    }
+  
+    100% {
+      transform: scale3d(1, 1, 1);
+    }
+  
+ */
+  
