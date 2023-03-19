@@ -1,4 +1,5 @@
 import React, { useRef } from 'react'
+import Modal from '../Modal'
 import styles from './OneMovie.module.css'
 
 const OneMovie = (props) => {
@@ -16,6 +17,7 @@ const OneMovie = (props) => {
                             <h2 className={styles.glitchXXL}>{item.Title}</h2>
                             <img src={item.Poster} alt={item.title} className={styles.mainImg}></img>
                             <h2 className={styles.glitchXL}>{item.Year}</h2>
+                            <button className="moreBtn" onClick={() => Modal(item.imdbID)}>MORE</button>
                         </div>
                     )
                 }):""

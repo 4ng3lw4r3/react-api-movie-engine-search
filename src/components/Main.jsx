@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import SearchMovie from './SearchMovie';
 import OneMovie from './oneMovie/OneMovie';
 import movieService from '../services/movieService';
+import Modal from './Modal';
 
 const Main = () => {
     const [moviesFromApi, setMoviesFromApi] = useState([]);
@@ -27,6 +28,7 @@ const Main = () => {
         <div>
             <SearchMovie setResults={setResults}/>
             <OneMovie moviesFromApi={moviesFromApi}/>
+            <Modal />
         </div>
     )
 }
