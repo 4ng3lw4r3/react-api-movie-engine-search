@@ -1,14 +1,22 @@
-import { useState, useEffect } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import searchMovie from '../services/movieService';
 import OneMovie from './oneMovie/OneMovie';
 
 const SearchMovie = ({setResults}) => {
     const [searchWord, setSearchWord] = useState('');
     const [query, setQuery] = useState("")
+    const inputRef = useRef();
+
 
     //1. set search word to state
     const handleChange = (searchWord) => {
-        setSearchWord(searchWord);
+
+        if (searchWord !== '') {
+            setSearchWord(searchWord);
+            inputRef.current.value = ""
+        } else {
+            alert('Please')
+        }
     }
 
     //2. function calling service api
@@ -22,12 +30,21 @@ const SearchMovie = ({setResults}) => {
         getMovies(searchWord);
     }, [searchWord])
 
+
+   
+
     return (
         <div>
             <input
             type="text"
-            value={searchWord}
-            onChange={(e) => handleChange(e.target.value)}/>
+            // value={searchWord}
+            ref={inputRef}
+            // onChange={(e) => handleChange(e.target.value)}
+            />
+            <button
+            onClick={() => handleChange(inputRef.current.value)}
+            dangerouslySetInnerHTML={{__html: 'Search'}}
+            />
         </div>
     )
     }

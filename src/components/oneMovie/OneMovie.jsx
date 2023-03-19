@@ -1,13 +1,13 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import styles from './OneMovie.module.css'
 
 const OneMovie = (props) => {
 
-    console.log(props.moviesFromApi.Search)
     const items = props.moviesFromApi.Search
+    const itemsRef = useRef()
 
     return (
-        <div className={styles.list}> 
+        <div className={styles.list} ref={itemsRef}> 
             {
                 items?items.map(item => {
                     return(
@@ -18,10 +18,12 @@ const OneMovie = (props) => {
                             <h2 className={styles.glitchXL}>{item.Year}</h2>
                         </div>
                     )
-                }):'not found'
+                }):""
             }
 
         </div>
+
+
     )
 }
 
