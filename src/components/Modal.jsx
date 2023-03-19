@@ -1,25 +1,22 @@
-import React from 'react'
-import OneMovie from './oneMovie/OneMovie'
-import SearchMovie from './SearchMovie'
+import React from 'react';
 
-const Modal = ({moviesFromApi, goBack}) => {
-    console.log(moviesFromApi.Title)
-    return (<div className="Modal">
-            <h1>{moviesFromApi.Title} ({moviesFromApi.Year})</h1>
-            <div className="modalBox">
-                <img src={moviesFromApi.Poster} alt={moviesFromApi.Title}/>
+const Modal = ({chosen}) => {
+    console.log(chosen.Title)
+    return (<div className="modal">
+            <h1>{chosen.Title} ({chosen.Year})</h1>
+            <div className="container-one">
+                <img src={chosen.Poster} alt={chosen.Title}/>
                 <div className="text">
-                    <p><strong>Plot: </strong>{moviesFromApi.Plot}</p>
-                    <p><strong>Genre: </strong>{moviesFromApi.Genre}</p>
-                    <p><strong>Actors: </strong>{moviesFromApi.Actors}</p>
-                    <p><strong>Writer: </strong>{moviesFromApi.Writer}</p>
-                    <p><strong>Runtime: </strong>{moviesFromApi.Runtime}</p>
-                    <p><strong>Released: </strong>{moviesFromApi.Released}</p>
-                    <p><strong>Production: </strong>{moviesFromApi.Production}</p>
+                    <p><strong>Plot: </strong>{chosen.Plot}</p>
+                    <p><strong>Genre: </strong>{chosen.Genre}</p>
+                    <p><strong>Actors: </strong>{chosen.Actors}</p>
+                    <p><strong>Writer: </strong>{chosen.Writer}</p>
+                    <p><strong>Runtime: </strong>{chosen.Runtime}</p>
+                    <p><strong>Released: </strong>{chosen.Released}</p>
+                    <p><strong>Production: </strong>{chosen.Production}</p>
                 </div>
             </div>
-            <button className="button" onClick={goBack}>BACK</button>
         </div>
     )
 }
-export default Modal
+export default Modal;

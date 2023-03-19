@@ -1,11 +1,14 @@
 import { useRef, useState, useEffect } from 'react';
 import searchMovie from '../services/movieService';
-import OneMovie from './oneMovie/OneMovie';
+import Modal from './Modal';
+import Movies from './oneMovie/OneMovie'
 
 const SearchMovie = ({setResults}) => {
     const [searchWord, setSearchWord] = useState('');
     const [query, setQuery] = useState("")
     const inputRef = useRef();
+    const [chosen, setChosen] = useState({});
+
 
 
     //1. set search word to state
@@ -30,6 +33,19 @@ const SearchMovie = ({setResults}) => {
         getMovies(searchWord);
     }, [searchWord])
 
+    
+
+    const getMovie = async (id) => {
+        const response = await fetch(`https://www.omdbapi.com/?apikey=e4db3ced&i=${id}`);
+        const movie = await response.json();
+        // alert(movie.Plot)
+        setChosen (movie);
+    }
+
+    useEffect(() => {
+        getMovie();
+    },[])
+
 
    
 
@@ -45,6 +61,7 @@ const SearchMovie = ({setResults}) => {
             onClick={() => handleChange(inputRef.current.value)}
             dangerouslySetInnerHTML={{__html: 'Search'}}
             />
+            {(typeof chosen.Title != "undefined") ? <Modal chosen={chosen}/> : false}
         </div>
     )
     }
