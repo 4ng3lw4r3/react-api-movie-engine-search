@@ -33,18 +33,6 @@ const SearchMovie = ({setResults}) => {
         getMovies(searchWord);
     }, [searchWord])
 
-    
-
-    const getMovie = async (id) => {
-        const response = await fetch(`https://www.omdbapi.com/?apikey=e4db3ced&i=${id}`);
-        const movie = await response.json();
-        // alert(movie.Plot)
-        setChosen (movie);
-    }
-
-    useEffect(() => {
-        getMovie();
-    },[])
 
 
    
