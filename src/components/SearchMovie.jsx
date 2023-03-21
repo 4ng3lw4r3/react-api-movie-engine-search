@@ -29,8 +29,6 @@ const SearchMovie = ({setResults}) => {
         getMovies(searchWord);
     }, [searchWord])
 
-   
-
     return (
         <div>
             <input
