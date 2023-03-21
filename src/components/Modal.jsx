@@ -28,7 +28,6 @@ const Modal = ({setOpenModal, chosen}) => {
                 </div>
             </div>
         </div>
-        Modal
     </div>
   )
 }

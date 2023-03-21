@@ -2,14 +2,11 @@ import React, { useState } from 'react'
 import styles from './OneMovie.module.css'
 import Modal from '../Modal';
 
-
 const OneMovie = (props) => {
 
     const items = props.moviesFromApi.Search
     const [modalOpen, setOpenModal] = useState(false);
     const [chosen, setChosen] = useState([]);
-
-
 
     const getMovie = async (id) => {
         const response = await fetch(`https://www.omdbapi.com/?apikey=e4db3ced&i=${id}`);
